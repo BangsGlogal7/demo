@@ -5,15 +5,15 @@
       </x-slot:heading>
       
      @foreach ($jobs as $job)
-        <div class="p-4 mb-4 bg-gray-800 rounded-lg">
+        <li class="p-4 mb-4 bg-gray-800 rounded-lg">
 
-            <a href="jobs/{{ $job['id'] }}">
+            <a href="jobs/{{ $job->id }}">
                   
-                  <h2 class="text-xl font-bold text-white">{{ $job['title'] }}</h2>
-                   <p class="text-gray-400">{{ $job['company'] }}</p>
+                  <h2 class="text-xl font-bold text-white">{{ $job->title }}</h2>
+                   <p class="text-gray-400">{{ $job->salary }} GNF</p>
             </a>
             
-        </div>
+        </li>
      
      @endforeach
 </x-layout>
