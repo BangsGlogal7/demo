@@ -4,17 +4,21 @@
          Liste des emplois 
       </x-slot:heading>
       
-     @foreach ($jobs as $job)
-        <li class="p-4 mb-4 bg-gray-800 rounded-lg">
+     <div class="space-y-4 ">
 
-            <a href="jobs/{{ $job->id }}">
-                  
-                  <h2 class="text-xl font-bold text-white">{{ $job->title }}</h2>
-                   <p class="text-gray-400">{{ $job->salary }} GNF</p>
-            </a>
-            
-        </li>
-     
-     @endforeach
+            @foreach ($jobs as $job)
+
+                  <a href="jobs/{{ $job->id }}" class="block px-4 py-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+                        
+                       <div class="font-bold text-blue-500 text-sm"> {{ $job->employer->name}}</div>
+
+                        <div>
+                               <strong class="text-lg">{{ $job->title }} : </strong> Payer a {{ number_format($job->salary, 0, ',', ' ') }} GNF par mois
+                        </div>
+                  </a>
+             
+            @endforeach
+     </div>
+     {{ $jobs->links() }}
 </x-layout>
   
