@@ -11,11 +11,14 @@ use App\Models\Tag;
 class Job extends Model{
     use HasFactory;
     protected $table = "job_listings";
-    protected $fillable = [
+
+    /* protected $fillable = [
+        'employer_id',
         'title',
         'salary',
-        'employer_id',
-    ];
+    ]; */
+    
+    protected $guarded = [];
 
     public function employer(){
 
