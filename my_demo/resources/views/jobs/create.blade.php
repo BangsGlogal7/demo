@@ -27,6 +27,10 @@
                       </div>
                     </div>
 
+                    @error('title')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+
                   </div>
 
                   <div class="sm:col-span-4">
@@ -38,14 +42,16 @@
                       </div>
                     </div>
 
+                    @error('salary')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+
                   </div>
 
           </div>
-
+ 
         </div>
-
-            
-
+        
       </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
