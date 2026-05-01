@@ -29,10 +29,9 @@
 
                                 <div class="ml-10 flex items-baseline space-x-4">
 
-                                    <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                                     <x-nav-link href="/" :active="request()->is('/')">Acceuil</x-nav-link>
-                                    <x-nav-link href="/jobs" :active="request()->is('jobs')">Emplois</x-nav-link>
-                                    <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                                    <x-nav-link href="/jobs" :active="request()->is('/jobs')">Emplois</x-nav-link>
+                                    <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link> 
                                 
                                 </div>
 
@@ -147,9 +146,8 @@
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
 
                 <h1 class="text-3xl font-bold tracking-tight text-white">{{ $heading }}</h1>
-
                 <x-button href="/jobs/create">Créer une Offre</x-button>
-                
+                <x-form-error name="titre"></x-form-error>
             </div>
 
         </header>
