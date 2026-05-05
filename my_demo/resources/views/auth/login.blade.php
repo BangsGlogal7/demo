@@ -1,7 +1,7 @@
 <x-layout>
 
   <x-slot:heading>Connection</x-slot:heading>
-
+   
     <form method="POST" action="/login"> 
       
         @csrf
@@ -15,9 +15,9 @@
                     <x-form-field>  
                         <x-form-label for="email">Email</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="email" type="email" name="email" required/>
+                            <x-form-input id="email" type="email" name="email" :value="old('email')" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "email"/>
                     </x-form-field>
 
                     <x-form-field>  
@@ -25,7 +25,7 @@
                         <div class="mt-2">
                             <x-form-input id="password" type="password" name="password" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "password"/>
                     </x-form-field>
 
                 </div>

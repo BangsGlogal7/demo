@@ -1,8 +1,8 @@
 <x-layout>
 
   <x-slot:heading>Inscriptions </x-slot:heading>
-
-    <form method="POST" action="/login"> 
+   
+    <form method="POST" action="/register"> 
       
         @csrf
 
@@ -13,19 +13,19 @@
                 <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
                     <x-form-field>
-                        <x-form-label for="prenom">Prenom</x-form-label>
+                        <x-form-label for="last_name">Prenom</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="prnom" type="text" name="prenom" required/>
+                            <x-form-input id="last_name" type="text" name="last_name" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "last_name"/>
                     </x-form-field>
 
                     <x-form-field>  
-                        <x-form-label for="nom">Nom</x-form-label>
+                        <x-form-label for="first_name">Nom</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="nom" type="text" name="nom" required/>
+                            <x-form-input id="first_name" type="text" name="first_name" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "first_name"/>
                     </x-form-field>
 
                     <x-form-field>  
@@ -33,7 +33,7 @@
                         <div class="mt-2">
                             <x-form-input id="email" type="email" name="email" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "email"/>
                     </x-form-field>
 
                     <x-form-field>  
@@ -41,15 +41,15 @@
                         <div class="mt-2">
                             <x-form-input id="password" type="password" name="password" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "password"/>
                     </x-form-field>
 
                     <x-form-field>  
-                        <x-form-label for="password">Confirmer mot de passe</x-form-label>
+                        <x-form-label for="password_confirmation">Confirmer mot de passe</x-form-label>
                         <div class="mt-2">
-                            <x-form-input id="password" type="password" name="password" required/>
+                            <x-form-input id="password_confirmation" type="password" name="password_confirmation" required/>
                         </div>
-                        <x-form-error name = "name"/>
+                        <x-form-error name = "password_confirmation"/>
                     </x-form-field>
 
                 </div>

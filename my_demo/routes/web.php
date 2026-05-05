@@ -19,7 +19,10 @@ Route::controller(JobController::class)->group(function() {
 }); 
 
 Route::view('/contact', 'contact');
-Route::get('/register',[RegisteredUserController::class, 'create'])->name('register');
+
+Route::get('/register',[RegisteredUserController::class, 'create']);
 Route::post('/register',[RegisteredUserController::class, 'store']);
+
 Route::get('/login', [sessionController::class, 'create']);
 Route::post('/login', [sessionController::class, 'store']);
+Route::post('/logout', [sessionController::class, 'destroy']);

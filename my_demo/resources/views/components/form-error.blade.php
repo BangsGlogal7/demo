@@ -1,5 +1,5 @@
 @props(['name'])
 
-@error($name)
-    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
-@enderror
+@if ($errors->has($name))
+    <p class="mt-2 text-sm text-red-600">{{ $errors->first($name) }}</p>
+@endif
